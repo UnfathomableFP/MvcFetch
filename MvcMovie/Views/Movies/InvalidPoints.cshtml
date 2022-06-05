@@ -1,0 +1,28 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "InvalidPoints";
+}
+
+<h1>!!ERROR!!</h1>
+
+<h4>Fetch Rewards</h4>
+<hr />
+<div>
+    <hr />
+    <dl class="row">
+        <dt>
+            <label>Invalid Points: </label>
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(error => error.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

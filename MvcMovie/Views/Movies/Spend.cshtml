@@ -1,0 +1,27 @@
+﻿@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Spend";
+}
+
+<h1>Spend</h1>
+
+<h4>Fetch Rewards</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+    <form asp-action="Spend">
+        <input type="number" name="points"/>
+        <input type="submit" value="Spend" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
